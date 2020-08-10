@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -88,8 +84,9 @@ public class App
             System.out.println("The number has to be numeric");
             System.exit(0);
         }
-        System.out.println("What is the language: 1 is French, 2 is German?");
 
+        System.out.println("What is the language: 1 is French, 2 is German?");
+        String optionisstring = scanner.nextLine();
         Integer option = null;
         try {
             option = Integer.parseInt(optionisstring);
@@ -101,7 +98,12 @@ public class App
         }
 
         if (option == 1) {
-            string translation = frenchTranslation.get(number - 1);
+            String translation = frenchTranslation.get(number - 1);
+            System.out.println(translation);
+        }
+        else if (option == 2) {
+            String translation = germanTranslation.get(number - 1);
+            System.out.println(translation);
         }
     }
 }
