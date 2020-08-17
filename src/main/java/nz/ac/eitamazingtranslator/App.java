@@ -8,6 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("What is the number to translate?");
+        //REQ: 1
+        System.out.println("Please enter a number between 1 and 30 to translate?");
+        Scanner scanner = new Scanner(System.in);
+        String numberisstring = scanner.nextLine();
     }
 }
