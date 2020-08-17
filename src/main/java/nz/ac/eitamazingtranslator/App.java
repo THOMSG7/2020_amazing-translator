@@ -105,5 +105,8 @@ public class App
             String translation = germanTranslation.get(number - 1);
             System.out.println(translation);
         }
+        else {
+            System.out.println("Only options 1 for French or Option 2 for German is available.");
+        }
     }
 }
