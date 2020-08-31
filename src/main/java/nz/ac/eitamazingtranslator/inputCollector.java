@@ -2,7 +2,7 @@ package nz.ac.eitamazingtranslator;
 
 public class inputCollector {
     public static void number(String arps) {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         String input = scanner.println;
         InputCollector collector = new InputCollector();
         Integer number = null;
@@ -11,13 +11,13 @@ public class inputCollector {
         }
         catch (UserInputException nfe) {
             return null;
-        }
+        }*/
     }
 
     //method
-    public Integer collectNumber(String input) {
+    /*public Integer collectNumber(String input) {
         //Exception catches non numeric
-        try {
+       try {
             Integer number = Integer.parseInt(input);
         }
         catch {
@@ -26,5 +26,5 @@ public class inputCollector {
             }
         }
         return number;
-    }
+    }*/
 }
