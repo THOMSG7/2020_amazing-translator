@@ -1,26 +1,10 @@
 package nz.ac.eitamazingtranslator;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Hashtable;
 
-public class TranslationDictionary {
+public interface TranslationDictionary {
 
-    private IDictionaries dictionaries;
+    public Hashtable<SupportedLanguage, Hashtable<Integer, String>> getTranslations();
+    public int intializeTranslations();
 
-
-    public boolean initializeDictionaries() {
-
-        dictionaries.initializeDataSource();
-    //We don't use it in the application itself
-        return dictionaries.isInitialized();
-
-    }
-
-    public String getTranslation(Integer number, Integer languageOption) throws LanguageNotAcceptable,NumberOutOfRangeException{
-        return dictionaries.getFromDataSource(number,languageOption);
-    }
-
-    public void setDictionaries(IDictionaries dictionaries) {
-        this.dictionaries = dictionaries;
-    }
 }
