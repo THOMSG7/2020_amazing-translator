@@ -77,7 +77,7 @@ public class RealOneDictionary implements IDictionaries{
 
     public String getFromDataSource(int number, int languageOption) throws LanguageNotSupportedException,NumberOutOfRangeException{
         if (number < 1 || number > 30) {
-            throw new NumberOutOfRangeException();
+            throw new NumberOutOfRangeException(number);
 
         }
 
@@ -89,7 +89,7 @@ public class RealOneDictionary implements IDictionaries{
             return germanTranslation.get(number - 1);
         }
         else {
-            throw new LanguageNotSupportedException();
+            throw new LanguageNotSupportedException("Error");
         }
 
     }

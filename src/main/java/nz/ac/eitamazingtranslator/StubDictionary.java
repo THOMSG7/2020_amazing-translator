@@ -7,7 +7,7 @@ public class StubDictionary implements IDictionaries{
     }
 
     @Override
-    public String getFromDataSource(int number, int languageOption) throws LanguageNotAcceptable, NumberOutOfRangeException {
+    public String getFromDataSource(int number, int languageOption) throws NumberOutOfRangeException, LanguageNotAcceptable {
         if (languageOption==1) {
             switch (number) {
                 case 1:
@@ -18,7 +18,7 @@ public class StubDictionary implements IDictionaries{
                     return "Duze";
 
                 default:
-                    throw new NumberOutOfRangeException();
+                    throw new NumberOutOfRangeException(number);
             }
         } else if (languageOption == 2) {
             switch (number) {
@@ -27,7 +27,7 @@ public class StubDictionary implements IDictionaries{
                 case 2:
                     return "Zinz";
                 default:
-                    throw new NumberOutOfRangeException();
+                    throw new NumberOutOfRangeException(number);
 
             }
         }else

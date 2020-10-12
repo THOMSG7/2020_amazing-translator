@@ -2,13 +2,11 @@ package nz.ac.eitamazingtranslator;
 
 public class LanguageOutOfRangeException extends Exception {
 
-    private string value;
+    private String value;
 
-    public LanguageOutOfRangeException(string value) {
+    public LanguageOutOfRangeException(String value) {
         this.value=value;
     }
-
-    InMemoryTranslationsDictionary.intializeTranslations()
 
     @Override
     public String getMessage() {
